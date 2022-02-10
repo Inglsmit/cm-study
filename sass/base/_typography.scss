@@ -1,0 +1,86 @@
+body {
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
+  /*font-size: 16px;*/
+  line-height: 1.7;
+  color: $color-grey-dark;
+}
+
+.heading-primary {
+  color: $color-white;
+
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
+
+  &--main {
+    display: inline-block;
+    font-family: $default-font-family;
+    font-size: 11rem;
+    text-transform: uppercase;
+    line-height: 1;
+    width: 80%;
+  }
+
+  &--sub {
+    display: block;
+    font-family: Karla, sans-serif;
+    font-weight: normal;
+    font-size: 2.45rem;
+    width: 50%;
+  }
+}
+
+.heading-secondary {
+  font-family: $default-font-family;
+  color: rgb(0, 102, 179);
+  font-size: 9rem;
+  line-height: 1;
+}
+
+.heading-tertiary {
+  font-size: 4rem;
+  line-height: 1;
+  font-family: $default-font-family;
+  font-weight: 400;
+  color: rgb(0, 102, 179);
+  position: relative;
+  display: inline-flex;
+
+  &--arrow-link {
+    &:before {
+      content: "";
+      position: absolute;
+      background-image: url(https://columbiaokura.com/wp-content/themes/machina-theme/images/blue-arrow.png);
+      padding: 6px;
+      line-height: 1px;
+      height: 2.8rem;
+      min-width: 2.8rem;
+      background-size: 16px;
+      background-repeat: no-repeat;
+      background-position: 6px 6px;
+      z-index: 1;
+      right: 0;
+      top: 6px;
+    }
+    &:after {
+      content: "";
+      display: inline-flex;
+      background-color: rgb(229, 231, 235);
+      border-radius: 50%;
+      height: 2.8rem;
+      width: 2.8rem;
+      margin-top: 6px;
+      margin-left: 2rem;
+    }
+  }
+}
+
+.paragraph {
+  font-size: 2rem;
+  font-family: "Karla", sans-serif;
+  line-height: 2.75rem;
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}

@@ -1,0 +1,22 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin footer-link-clear {
+  display: block;
+  text-decoration: none;
+  color: rgb(57, 88, 111);
+  line-height: 2rem;
+  &:hover {
+    color: rgb(0, 102, 179);
+
+    text-stroke: 1px #0066b3;
+    text-stroke: 0.5px #0066b3;
+    -webkit-text-stroke: 1px #0066b3;
+    -webkit-text-stroke: 0.5px #0066b3;
+  }
+}

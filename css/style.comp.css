@@ -1,0 +1,382 @@
+.btn, .btn:link, .btn:visited {
+  display: inline-block;
+  line-height: 2rem;
+  width: fit-content;
+  font-size: 1.8rem;
+  font-family: "Karla", sans-serif;
+  border-radius: 3rem;
+  text-decoration: none;
+  padding: 0 4.8rem 0 4.8rem;
+  text-align: center;
+  line-height: 5rem;
+  font-weight: 700; }
+
+.btn--small, .btn--small:link, .btn--small:visited {
+  line-height: 2.8rem;
+  padding: 0.8rem 2.4rem;
+  font-size: 1.6rem; }
+
+.btn--blue {
+  background-color: #00aeef;
+  color: #333333; }
+  .btn--blue:hover {
+    background-color: #5ccbf5; }
+
+.hero {
+  height: 100vh;
+  background-image: url(https://columbiaokura.com/wp-content/uploads/2017/02/DSC_0389-1-1140x760.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  display: flex;
+  align-items: center; }
+  .hero__bg-mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://columbiaokura.com/wp-content/themes/machina-theme/images/machina-hero-bg-pattern.png);
+    background-repeat: repeat; }
+  .hero__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .hero__logo {
+    height: 3.5rem; }
+  .hero__text-box {
+    text-align: left;
+    padding: 3rem;
+    z-index: 1; }
+
+.row {
+  display: flex;
+  flex-direction: row; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc( 2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+  .row .col-1-of-5 {
+    width: calc((100% - 4 * 6rem) / 5); }
+  .row .col-2-of-4 {
+    width: calc( 2 * ((100% - 3 * 6rem) / 4) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc( 3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
+
+.header {
+  background-color: transparent;
+  padding: 1.2rem 0 1.4rem;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%; }
+  .header.sticky {
+    background-color: #0066b3; }
+  .header-wrap {
+    display: flex;
+    justify-content: space-between;
+    max-width: 128rem;
+    margin: 0 auto;
+    padding: 0 1.6rem; }
+  .header__logo {
+    width: 19.2rem; }
+    .header__logo img {
+      width: 100%; }
+  .header__nav {
+    display: flex;
+    align-items: center; }
+    .header__nav-wrap {
+      display: flex;
+      align-items: center; }
+  .header__link {
+    font-size: 2rem;
+    line-height: 2.8rem;
+    color: #fff;
+    padding: 0.8rem 1.6rem;
+    margin: 0 1.2rem;
+    text-decoration: none; }
+  .header__link--ico {
+    fill: #fff;
+    padding: 0.4rem;
+    display: flex;
+    margin: 0; }
+    .header__link--ico svg {
+      fill: #fff;
+      width: 2rem; }
+
+.text-image {
+  margin: 9.6rem 3.5rem; }
+  .text-image__description {
+    padding: 0 1.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%; }
+  .text-image .img-box {
+    overflow: hidden; }
+    .text-image .img-box img {
+      width: 100%; }
+
+.hero-list {
+  margin: 9.6rem 0; }
+  .hero-list .hero-list-wrap {
+    max-width: 104rem;
+    margin: 0 auto; }
+  .hero-list__card:hover .heading-tertiary--arrow-link:before {
+    filter: grayscale(1) invert(1) brightness(2); }
+  .hero-list__card:hover .heading-tertiary--arrow-link:after {
+    background-color: #4d94ca; }
+  .hero-list__text {
+    font-size: 2rem;
+    line-height: 2.8rem; }
+  .hero-list .row {
+    justify-content: space-between; }
+
+.section-cta {
+  padding: 9.6rem 0;
+  position: relative;
+  background-image: linear-gradient(to right, #0066b3, #057bd4, #109af8); }
+  .section-cta .cta {
+    text-align: center; }
+    .section-cta .cta-msg {
+      font-size: 9rem;
+      line-height: 1;
+      font-weight: 400;
+      color: #fff;
+      font-family: "DINCondensedWebDemiBold", sans-serif; }
+      .section-cta .cta-msg__second-line {
+        display: inline-block;
+        margin-top: 0.4rem;
+        color: #00aeef; }
+  .section-cta:before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-position: left center;
+    width: 33.5rem;
+    height: 38rem;
+    opacity: 0.3;
+    background-size: contain;
+    background-image: url(https://columbiaokura.com/wp-content/themes/machina-theme/images/new-cubes-full-white-left.svg);
+    top: 50%;
+    left: 0;
+    -webkit-transform: translate(0%, -50%);
+    transform: translate(0%, -50%);
+    text-align: center; }
+  .section-cta:after {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: right center;
+    width: 33.5rem;
+    height: 38rem;
+    opacity: 0.3;
+    z-index: 0;
+    background-size: contain;
+    background-image: url(https://columbiaokura.com/wp-content/themes/machina-theme/images/new-cubes-full-white.svg);
+    top: 50%;
+    right: 0;
+    -webkit-transform: translate(0%, -50%);
+    transform: translate(0%, -50%);
+    text-align: center; }
+
+.footer {
+  margin: 9.6rem 0;
+  font-family: Karla, sans-serif;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: #39586f; }
+  .footer .footer-wrap {
+    max-width: 128rem;
+    margin: 0 auto; }
+  .footer .footer-heading {
+    font-size: 2rem;
+    font-family: "DINCondensedWebDemiBold", sans-serif;
+    margin-bottom: 0.4rem; }
+  .footer .footer-link-tel {
+    display: inline-block;
+    margin-top: 1.8rem;
+    display: block;
+    text-decoration: none;
+    color: #39586f;
+    line-height: 2rem; }
+    .footer .footer-link-tel:hover {
+      color: #0066b3;
+      text-stroke: 1px #0066b3;
+      text-stroke: 0.5px #0066b3;
+      -webkit-text-stroke: 1px #0066b3;
+      -webkit-text-stroke: 0.5px #0066b3; }
+  .footer .footer-nav__link {
+    display: block;
+    text-decoration: none;
+    color: #39586f;
+    line-height: 2rem; }
+    .footer .footer-nav__link:hover {
+      color: #0066b3;
+      text-stroke: 1px #0066b3;
+      text-stroke: 0.5px #0066b3;
+      -webkit-text-stroke: 1px #0066b3;
+      -webkit-text-stroke: 0.5px #0066b3; }
+  .footer .footer-copyright {
+    color: #979ea6; }
+  .footer .footer-copyright-second {
+    display: block;
+    text-align: right; }
+  .footer .col-1-of-5:nth-child(2) {
+    padding-left: 5.6rem; }
+  .footer .col-1-of-5:nth-child(3) {
+    padding-left: 5.6rem; }
+    .footer .col-1-of-5:nth-child(3) .footer-nav__link {
+      color: #0066b3; }
+  .footer .col-1-of-5:nth-child(5) {
+    text-align: right; }
+  .footer .col-1-of-5:nth-child(4) {
+    padding-left: 5.6rem; }
+
+.u-center-text {
+  text-align: center; }
+
+.u-margin-top-middle {
+  margin-top: 4rem; }
+
+.u-margin-bottom-big {
+  margin-bottom: 7rem; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem; }
+
+.u-margin-bottom-middle {
+  margin-bottom: 6rem; }
+
+.u-margin-right-middle {
+  margin-right: 15rem; }
+
+.u-margin-left-small {
+  margin-left: 2.8rem; }
+
+.u-flex-justify-btw {
+  justify-content: space-between; }
+
+@font-face {
+  font-family: "DINCondensedWebDemiBold";
+  src: url("../../fonts/DIN-Condensed_Demi-Bold.woff2") format("woff2"), url("../../fonts/DIN-Condensed_Demi-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: "DINCondensedWebNormal";
+  src: url("../../fonts/DIN-Condensed_Normal.woff2") format("woff2"), url("../../fonts/DIN-Condensed_Normal.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(100px); }
+  80% {
+    transform: translateX(-20px); }
+  100% {
+    opacity: 100%;
+    transform: translateX(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100px); }
+  80% {
+    transform: translateX(-20px); }
+  100% {
+    opacity: 100%;
+    transform: translateX(0); } }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  color: #525252; }
+
+p {
+  font-family: "Karla", sans-serif; }
+
+body {
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
+  /*font-size: 16px;*/
+  line-height: 1.7;
+  color: #777; }
+
+.heading-primary {
+  color: #fff;
+  backface-visibility: hidden;
+  margin-bottom: 6rem; }
+  .heading-primary--main {
+    display: inline-block;
+    font-family: "DINCondensedWebDemiBold", sans-serif;
+    font-size: 11rem;
+    text-transform: uppercase;
+    line-height: 1;
+    width: 80%; }
+  .heading-primary--sub {
+    display: block;
+    font-family: Karla, sans-serif;
+    font-weight: normal;
+    font-size: 2.45rem;
+    width: 50%; }
+
+.heading-secondary {
+  font-family: "DINCondensedWebDemiBold", sans-serif;
+  color: #0066b3;
+  font-size: 9rem;
+  line-height: 1; }
+
+.heading-tertiary {
+  font-size: 4rem;
+  line-height: 1;
+  font-family: "DINCondensedWebDemiBold", sans-serif;
+  font-weight: 400;
+  color: #0066b3;
+  position: relative;
+  display: inline-flex; }
+  .heading-tertiary--arrow-link:before {
+    content: "";
+    position: absolute;
+    background-image: url(https://columbiaokura.com/wp-content/themes/machina-theme/images/blue-arrow.png);
+    padding: 6px;
+    line-height: 1px;
+    height: 2.8rem;
+    min-width: 2.8rem;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: 6px 6px;
+    z-index: 1;
+    right: 0;
+    top: 6px; }
+  .heading-tertiary--arrow-link:after {
+    content: "";
+    display: inline-flex;
+    background-color: #e5e7eb;
+    border-radius: 50%;
+    height: 2.8rem;
+    width: 2.8rem;
+    margin-top: 6px;
+    margin-left: 2rem; }
+
+.paragraph {
+  font-size: 2rem;
+  font-family: "Karla", sans-serif;
+  line-height: 2.75rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
