@@ -20,6 +20,9 @@
 
 .u-margin-right-middle {
   margin-right: 15rem;
+  @include respond(tab-port) {
+    margin-right: 0;
+  }
 }
 
 .u-margin-left-small {

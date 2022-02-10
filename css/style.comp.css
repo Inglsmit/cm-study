@@ -1,3 +1,34 @@
+@font-face {
+  font-family: "DINCondensedWebDemiBold";
+  src: url("../../fonts/DIN-Condensed_Demi-Bold.woff2") format("woff2"), url("../../fonts/DIN-Condensed_Demi-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: "DINCondensedWebNormal";
+  src: url("../../fonts/DIN-Condensed_Normal.woff2") format("woff2"), url("../../fonts/DIN-Condensed_Normal.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
 .btn, .btn:link, .btn:visited {
   display: inline-block;
   line-height: 2rem;
@@ -10,6 +41,11 @@
   text-align: center;
   line-height: 5rem;
   font-weight: 700; }
+  @media only screen and (max-width: 56.25em) {
+    .btn, .btn:link, .btn:visited {
+      font-size: 1.8rem;
+      width: 100%;
+      line-height: 4.8rem; } }
 
 .btn--small, .btn--small:link, .btn--small:visited {
   line-height: 2.8rem;
@@ -45,7 +81,10 @@
   .hero__text-box {
     text-align: left;
     padding: 3rem;
-    z-index: 1; }
+    z-index: 1;
+    max-width: 128rem;
+    margin: 0 auto;
+    padding: 0 1.6rem; }
 
 .row {
   display: flex;
@@ -64,6 +103,11 @@
     width: calc( 2 * ((100% - 3 * 6rem) / 4) + 6rem); }
   .row .col-3-of-4 {
     width: calc( 3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
+  @media only screen and (max-width: 56.25em) {
+    .row {
+      flex-direction: column; }
+      .row [class^="col-"] {
+        width: 100%; } }
 
 .header {
   background-color: transparent;
@@ -105,6 +149,9 @@
     .header__link--ico svg {
       fill: #fff;
       width: 2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .header__nav {
+      display: none; } }
 
 .text-image {
   margin: 9.6rem 3.5rem; }
@@ -114,25 +161,46 @@
     flex-direction: column;
     justify-content: center;
     height: 100%; }
+    @media only screen and (max-width: 56.25em) {
+      .text-image__description {
+        padding: 0; } }
   .text-image .img-box {
     overflow: hidden; }
     .text-image .img-box img {
       width: 100%; }
+  @media only screen and (max-width: 56.25em) {
+    .text-image {
+      margin-bottom: 2.4rem;
+      margin: 5.6rem 1.6rem; }
+      .text-image .row {
+        flex-direction: column-reverse; } }
 
 .hero-list {
   margin: 9.6rem 0; }
   .hero-list .hero-list-wrap {
     max-width: 104rem;
     margin: 0 auto; }
-  .hero-list__card:hover .heading-tertiary--arrow-link:before {
-    filter: grayscale(1) invert(1) brightness(2); }
-  .hero-list__card:hover .heading-tertiary--arrow-link:after {
-    background-color: #4d94ca; }
+    @media only screen and (max-width: 56.25em) {
+      .hero-list .hero-list-wrap {
+        padding: 0 2rem; } }
+  .hero-list__card {
+    display: inline-block;
+    overflow: hidden; }
+    .hero-list__card:hover .heading-tertiary--arrow-link:before {
+      filter: grayscale(1) invert(1) brightness(2); }
+    .hero-list__card:hover .heading-tertiary--arrow-link:after {
+      background-color: #4d94ca; }
+    @media only screen and (max-width: 56.25em) {
+      .hero-list__card {
+        margin-bottom: 2.4rem; } }
   .hero-list__text {
     font-size: 2rem;
     line-height: 2.8rem; }
   .hero-list .row {
     justify-content: space-between; }
+  @media only screen and (max-width: 56.25em) {
+    .hero-list {
+      margin-top: 5.8rem; } }
 
 .section-cta {
   padding: 9.6rem 0;
@@ -227,14 +295,33 @@
     text-align: right; }
   .footer .col-1-of-5:nth-child(2) {
     padding-left: 5.6rem; }
+    @media only screen and (max-width: 56.25em) {
+      .footer .col-1-of-5:nth-child(2) {
+        padding-left: 0; } }
   .footer .col-1-of-5:nth-child(3) {
     padding-left: 5.6rem; }
     .footer .col-1-of-5:nth-child(3) .footer-nav__link {
       color: #0066b3; }
+    @media only screen and (max-width: 56.25em) {
+      .footer .col-1-of-5:nth-child(3) {
+        padding-left: 0; } }
   .footer .col-1-of-5:nth-child(5) {
     text-align: right; }
   .footer .col-1-of-5:nth-child(4) {
     padding-left: 5.6rem; }
+    @media only screen and (max-width: 56.25em) {
+      .footer .col-1-of-5:nth-child(4) {
+        padding-left: 0; } }
+  @media only screen and (max-width: 56.25em) {
+    .footer .col-1-of-5 {
+      margin-bottom: 2.4rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .footer {
+      margin: 5.6rem 1.6rem;
+      font-size: 1.6rem;
+      padding: 0; }
+      .footer .row {
+        flex-direction: column; } }
 
 .u-center-text {
   text-align: center; }
@@ -253,26 +340,15 @@
 
 .u-margin-right-middle {
   margin-right: 15rem; }
+  @media only screen and (max-width: 56.25em) {
+    .u-margin-right-middle {
+      margin-right: 0; } }
 
 .u-margin-left-small {
   margin-left: 2.8rem; }
 
 .u-flex-justify-btw {
   justify-content: space-between; }
-
-@font-face {
-  font-family: "DINCondensedWebDemiBold";
-  src: url("../../fonts/DIN-Condensed_Demi-Bold.woff2") format("woff2"), url("../../fonts/DIN-Condensed_Demi-Bold.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap; }
-
-@font-face {
-  font-family: "DINCondensedWebNormal";
-  src: url("../../fonts/DIN-Condensed_Normal.woff2") format("woff2"), url("../../fonts/DIN-Condensed_Normal.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap; }
 
 @keyframes moveInLeft {
   0% {
@@ -329,18 +405,32 @@ body {
     text-transform: uppercase;
     line-height: 1;
     width: 80%; }
+    @media only screen and (max-width: 56.25em) {
+      .heading-primary--main {
+        font-size: 4.8rem;
+        width: 100%; } }
   .heading-primary--sub {
     display: block;
     font-family: Karla, sans-serif;
     font-weight: normal;
     font-size: 2.45rem;
     width: 50%; }
+    @media only screen and (max-width: 56.25em) {
+      .heading-primary--sub {
+        font-size: 1.8rem;
+        width: 100%; } }
+  @media only screen and (max-width: 56.25em) {
+    .heading-primary {
+      margin-bottom: 3.2rem; } }
 
 .heading-secondary {
   font-family: "DINCondensedWebDemiBold", sans-serif;
   color: #0066b3;
   font-size: 9rem;
   line-height: 1; }
+  @media only screen and (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 4rem; } }
 
 .heading-tertiary {
   font-size: 4rem;
@@ -380,3 +470,7 @@ body {
   line-height: 2.75rem; }
   .paragraph:not(:last-child) {
     margin-bottom: 3rem; }
+  @media only screen and (max-width: 56.25em) {
+    .paragraph {
+      font-size: 1.6rem;
+      line-height: 2.4rem; } }

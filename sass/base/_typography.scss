@@ -19,6 +19,10 @@ body {
     text-transform: uppercase;
     line-height: 1;
     width: 80%;
+    @include respond(tab-port) {
+      font-size: 4.8rem;
+      width: 100%;
+    }
   }
 
   &--sub {
@@ -27,6 +31,14 @@ body {
     font-weight: normal;
     font-size: 2.45rem;
     width: 50%;
+    @include respond(tab-port) {
+      font-size: 1.8rem;
+      width: 100%;
+    }
+  }
+
+  @include respond(tab-port) {
+    margin-bottom: 3.2rem;
   }
 }
 
@@ -35,6 +47,9 @@ body {
   color: rgb(0, 102, 179);
   font-size: 9rem;
   line-height: 1;
+  @include respond(tab-port) {
+    font-size: 4rem;
+  }
 }
 
 .heading-tertiary {
@@ -82,5 +97,9 @@ body {
 
   &:not(:last-child) {
     margin-bottom: 3rem;
+  }
+  @include respond(tab-port) {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
   }
 }
