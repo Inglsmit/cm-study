@@ -27,6 +27,7 @@
 }
 
 .header {
+  display: none;
   background-color: transparent;
   padding: 1.2rem 0 2rem;
   position: fixed;
@@ -86,10 +87,8 @@
     margin-left: 4.4rem;
   }
 
-  @include respond(tab-port) {
-    &__nav {
-      display: none;
-    }
+  @include respond(tablet) {
+    display: block;
   }
 }
 
