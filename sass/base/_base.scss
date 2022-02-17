@@ -6,6 +6,11 @@
   box-sizing: inherit;
 }
 
+img {
+  display: block;
+  vertical-align: middle;
+}
+
 html {
   // This defines what 1rem is
   font-size: 62.5%;
@@ -18,4 +23,5 @@ body {
 
 p {
   font-family: "Karla", sans-serif;
+  color: rgb(82, 82, 82);
 }

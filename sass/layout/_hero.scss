@@ -1,5 +1,7 @@
 .hero {
   height: 100vh;
+  min-height: 460px;
+
   background-image: url(https://columbiaokura.com/wp-content/uploads/2017/02/DSC_0389-1-1140x760.jpg);
   background-size: cover;
   background-position: top;
@@ -13,6 +15,7 @@
     height: 100%;
     background-image: url(https://columbiaokura.com/wp-content/themes/machina-theme/images/machina-hero-bg-pattern.png);
     background-repeat: repeat;
+    z-index: 0;
   }
 
   &__logo-box {
@@ -27,10 +30,26 @@
 
   &__text-box {
     text-align: left;
-    padding: 3rem;
     z-index: 1;
-    max-width: 128rem;
+    position: relative;
     margin: 0 auto;
-    padding: 0 1.6rem;
+    overflow: hidden;
+    @include respond(tablet) {
+      margin-top: 4rem;
+    }
+  }
+
+  .btn-wrap {
+    margin-top: 3.2rem;
+
+    @include respond(tablet-land) {
+      margin-top: 8rem;
+    }
+  }
+
+  @include respond(tablet) {
+  }
+  @include respond(desktop) {
+    height: 800px;
   }
 }

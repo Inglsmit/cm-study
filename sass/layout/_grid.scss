@@ -1,6 +1,13 @@
 .row {
   display: flex;
-  flex-direction: row;
+
+  flex-direction: column;
+  [class^="col-"] {
+    width: 100%;
+    &:not(:last-child) {
+      // margin-right: $gutter-horizontal;
+    }
+  }
 
   [class^="col-"] {
     &:not(:last-child) {
@@ -9,14 +16,9 @@
   }
 
   .col-1-of-2 {
-    width: calc((100% - #{$gutter-horizontal}) / 2);
-    &:not(:last-child) {
-      // margin-right: $gutter-horizontal;
+    @include respond(tablet) {
+      width: calc((100% - 1.6rem) / 2);
     }
-  }
-
-  .col-1-of-3 {
-    width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
   }
 
   .col-2-of-3 {
@@ -45,13 +47,7 @@
     );
   }
 
-  @include respond(tab-port) {
-    flex-direction: column;
-    [class^="col-"] {
-      width: 100%;
-      &:not(:last-child) {
-        // margin-right: $gutter-horizontal;
-      }
-    }
+  @include respond(tablet) {
+    flex-direction: row;
   }
 }

@@ -1,21 +1,48 @@
+.section-wrap {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 1.6rem;
+  padding-left: 1.6rem;
+
+  @include respond(mobile) {
+    max-width: 64rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+  @include respond(tablet) {
+    max-width: 76.8rem;
+  }
+  @include respond(tablet-land) {
+    max-width: 102.4rem;
+    padding-right: 1.6rem;
+    padding-left: 1.6rem;
+  }
+  @include respond(desktop) {
+    max-width: 128rem;
+  }
+  @include respond(big-desktop) {
+    max-width: 153.6rem;
+  }
+}
+
 .header {
   background-color: transparent;
-  padding: 1.2rem 0 1.4rem;
+  padding: 1.2rem 0 2rem;
   position: fixed;
-  top: 0;
+  top: 43.95px;
   z-index: 100;
   width: 100%;
+  transition: all 0.2s ease-in-out;
 
   &.sticky {
     background-color: rgb(0, 102, 179);
+    top: 0;
   }
 
   &-wrap {
     display: flex;
     justify-content: space-between;
-    max-width: 128rem;
-    margin: 0 auto;
-    padding: 0 1.6rem;
   }
 
   &__logo {
@@ -55,6 +82,10 @@
     }
   }
 
+  .btn--small {
+    margin-left: 4.4rem;
+  }
+
   @include respond(tab-port) {
     &__nav {
       display: none;
@@ -63,89 +94,158 @@
 }
 
 .text-image {
-  margin: 9.6rem 3.5rem;
+  $p: &;
+  margin: 5.6rem 0;
 
   &__description {
-    padding: 0 1.6rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100%;
-    @include respond(tab-port) {
-      padding: 0;
+    padding: 0;
+
+    @include respond(tablet) {
+      margin-right: 14.4rem;
+      margin-left: 0;
     }
   }
 
-  .img-box {
-    overflow: hidden;
-    img {
-      width: 100%;
+  &__card {
+    &:not(:last-child) {
+      margin-bottom: 5.6rem;
+      @include respond(tablet) {
+        margin-bottom: 9.6rem;
+      }
     }
-  }
-  @include respond(tab-port) {
-    margin-bottom: 2.4rem;
-    margin: 5.6rem 1.6rem;
 
     .row {
       flex-direction: column-reverse;
     }
+
+    @include respond(tablet) {
+      .row {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      &--reverse {
+        #{$p}__description {
+          @include respond(tablet) {
+            margin-right: 0;
+            margin-left: 14.4rem;
+          }
+        }
+
+        .row {
+          flex-direction: row-reverse;
+        }
+      }
+    }
+  }
+
+  &__pic {
+    text-align: center;
+    margin-bottom: 0.8rem;
+
+    .img-box {
+      display: block;
+      display: flex;
+      overflow: hidden;
+      justify-content: center;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+    @include respond(tablet) {
+      margin-bottom: 0;
+    }
+  }
+
+  .col-1-of-2 {
+  }
+
+  .btn {
+    &,
+    &:link,
+    &:visited {
+      width: auto;
+    }
+  }
+
+  @include respond(tablet) {
+    margin: 9.6rem 0;
   }
 }
 
 .hero-list {
-  margin: 9.6rem 0;
+  margin: 5.6rem 0;
+
   .hero-list-wrap {
-    max-width: 104rem;
+    max-width: 125.31rem;
     margin: 0 auto;
-    @include respond(tab-port) {
-      padding: 0 2rem;
+  }
+
+  .col-1-of-3 {
+    &:not(:last-child) {
+      .hero-list__card {
+        margin-bottom: 2rem;
+      }
     }
   }
 
   &__card {
     display: inline-block;
     overflow: hidden;
+
     &:hover {
       .heading-tertiary--arrow-link {
         &:before {
           filter: grayscale(1) invert(1) brightness(2);
         }
         &:after {
-          background-color: rgb(77, 148, 202);
+          background-color: rgb(205, 225, 240);
         }
       }
     }
-    @include respond(tab-port) {
-      margin-bottom: 2.4rem;
+    @include respond(tablet) {
+      margin-bottom: 0;
     }
   }
 
   &__text {
-    font-size: 2rem;
-    line-height: 2.8rem;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+
+    @include respond(tablet) {
+      font-size: 2rem;
+      line-height: 2.8rem;
+    }
   }
 
   .row {
     justify-content: space-between;
   }
 
-  @include respond(tab-port) {
-    margin-top: 5.8rem;
+  @include respond(tablet) {
+    margin: 9.6rem 0;
+    .col-1-of-3 {
+      width: calc((100% - 16rem) / 3);
+    }
   }
 }
 
 .section-cta {
-  padding: 9.6rem 0;
+  padding: 5.6rem 0;
+  margin-bottom: 9.6rem;
   position: relative;
   background-image: linear-gradient(to right, #0066b3, #057bd4, #109af8);
 
   .cta {
     text-align: center;
 
-    &__wrap {
-    }
     &-msg {
-      font-size: 9rem;
+      font-size: 4rem;
       line-height: 1;
       font-weight: 400;
       color: #fff;
@@ -154,7 +254,19 @@
       &__second-line {
         display: inline-block;
         margin-top: 0.4rem;
+        margin-bottom: 1.6rem;
         color: rgb(0, 174, 239);
+        line-height: 4.4rem;
+      }
+    }
+  }
+
+  .btn-wrap {
+    margin-top: 2.8rem;
+    .btn {
+      @include respond(tablet) {
+        margin-top: 4rem;
+        padding: 1.2rem 11.725rem 1.2rem 11.725rem;
       }
     }
   }
@@ -196,12 +308,30 @@
     transform: translate(0%, -50%);
     text-align: center;
   }
+
+  @include respond(tablet) {
+    padding: 9.6rem 0;
+    .cta {
+      &-msg {
+        font-size: 9rem;
+        line-height: 1;
+
+        &__second-line {
+          margin-top: 0.4rem;
+          margin-bottom: 1.6rem;
+          line-height: 9.9rem;
+        }
+      }
+    }
+  }
 }
 
 .footer {
-  margin: 9.6rem 0;
+  margin: 5.6rem 1.6rem;
+  font-size: 1.6rem;
+  padding: 0;
   font-family: Karla, sans-serif;
-  font-size: 1.4rem;
+
   line-height: 2rem;
   color: rgb(57, 88, 111);
 
@@ -234,45 +364,51 @@
   }
 
   .col-1-of-5 {
+    width: calc((100% - 1.6rem) / 2);
+
     &:nth-child(2) {
-      padding-left: 5.6rem;
-      @include respond(tab-port) {
-        padding-left: 0;
+      padding-left: 0;
+      @include respond(tablet) {
+        padding-left: 5.6rem;
       }
     }
     &:nth-child(3) {
-      padding-left: 5.6rem;
+      padding-left: 0;
       .footer-nav {
         &__link {
           color: rgb(0, 102, 179);
         }
       }
-      @include respond(tab-port) {
-        padding-left: 0;
+      @include respond(tablet) {
+        padding-left: 5.6rem;
       }
     }
     &:nth-child(5) {
       text-align: right;
     }
     &:nth-child(4) {
-      padding-left: 5.6rem;
-      @include respond(tab-port) {
-        padding-left: 0;
+      padding-left: 0;
+      @include respond(tablet) {
+        padding-left: 5.6rem;
       }
     }
 
-    @include respond(tab-port) {
+    @include respond(tablet) {
+      width: calc((100% - 4 * 1.6rem) / 5);
       margin-bottom: 2.4rem;
     }
   }
 
-  @include respond(tab-port) {
-    margin: 5.6rem 1.6rem;
-    font-size: 1.6rem;
-    padding: 0;
+  .row {
+    flex-wrap: wrap;
+  }
+
+  @include respond(tablet) {
+    padding: 9.6rem 0 8rem;
+    font-size: 1.4rem;
 
     .row {
-      flex-direction: column;
+      flex-wrap: nowrap;
     }
   }
 }

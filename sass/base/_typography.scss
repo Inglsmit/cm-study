@@ -10,45 +10,57 @@ body {
   color: $color-white;
 
   backface-visibility: hidden;
-  margin-bottom: 6rem;
-
-  &--main {
-    display: inline-block;
-    font-family: $default-font-family;
-    font-size: 11rem;
-    text-transform: uppercase;
-    line-height: 1;
-    width: 80%;
-    @include respond(tab-port) {
-      font-size: 4.8rem;
-      width: 100%;
-    }
-  }
+  display: inline-block;
+  font-family: $default-font-family;
+  font-size: 4.8rem;
+  text-transform: uppercase;
+  line-height: 1;
+  width: 100%;
 
   &--sub {
     display: block;
     font-family: Karla, sans-serif;
     font-weight: normal;
-    font-size: 2.45rem;
-    width: 50%;
-    @include respond(tab-port) {
-      font-size: 1.8rem;
-      width: 100%;
+    color: #fff;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    margin-top: 0.8rem;
+    width: 100%;
+
+    @include respond(desktop) {
+      font-size: 2.4rem;
+      line-height: 3.2rem;
+      width: 50%;
+      margin-top: 2rem;
     }
   }
 
-  @include respond(tab-port) {
-    margin-bottom: 3.2rem;
+  @include respond(mobile) {
+  }
+  @include respond(tablet) {
+    font-size: 5.3rem;
+  }
+  @include respond(tablet-land) {
+    font-size: 7.8rem;
+  }
+  @include respond(desktop) {
+    font-size: 12.8rem;
+    width: 80%;
+  }
+  @include respond(big-desktop) {
   }
 }
 
 .heading-secondary {
   font-family: $default-font-family;
   color: rgb(0, 102, 179);
-  font-size: 9rem;
   line-height: 1;
-  @include respond(tab-port) {
-    font-size: 4rem;
+  font-size: 4rem;
+  margin-bottom: 1.2rem;
+
+  @include respond(tablet) {
+    font-size: 9rem;
+    margin-bottom: 1.2rem;
   }
 }
 
@@ -60,6 +72,7 @@ body {
   color: rgb(0, 102, 179);
   position: relative;
   display: inline-flex;
+  margin-bottom: 0.8rem;
 
   &--arrow-link {
     &:before {
@@ -91,15 +104,16 @@ body {
 }
 
 .paragraph {
-  font-size: 2rem;
   font-family: "Karla", sans-serif;
-  line-height: 2.75rem;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
 
   &:not(:last-child) {
-    margin-bottom: 3rem;
+    margin-bottom: 3.2rem;
   }
-  @include respond(tab-port) {
-    font-size: 1.6rem;
-    line-height: 2.4rem;
+
+  @include respond(tablet) {
+    font-size: 2rem;
+    line-height: 2.8rem;
   }
 }

@@ -9,17 +9,11 @@
     font-family: "Karla", sans-serif;
     border-radius: 3rem;
     text-decoration: none;
-    padding: 0 4.8rem 0 4.8rem;
-
+    padding: 1.2rem 4.8rem 1.2rem 4.8rem;
     text-align: center;
-    line-height: 5rem;
+    line-height: 2.4rem;
     font-weight: 700;
-
-    @include respond(tab-port) {
-      font-size: 1.8rem;
-      width: 100%;
-      line-height: 4.8rem;
-    }
+    width: 100%;
   }
 
   &:active,
@@ -42,6 +36,14 @@
 
     &:hover {
       background-color: rgb(92, 203, 245);
+    }
+  }
+
+  @include respond(tablet) {
+    &,
+    &:link,
+    &:visited {
+      width: auto;
     }
   }
 }
