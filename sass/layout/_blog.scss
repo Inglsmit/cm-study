@@ -49,7 +49,7 @@
   &__large-article {
     width: 100%;
     @include respond(tablet) {
-      width: calc(2 * ((100% - 2 * 2.4rem) / 3) + 2.4rem);
+      width: calc(68% - 2.4rem);
     }
   }
   &__img-box {
@@ -89,6 +89,10 @@
     }
     .top-article__img-box {
       margin-bottom: 1.6rem;
+      width: 100%;
+      @include respond(tablet) {
+        width: calc(68% - 2.4rem);
+      }
     }
     .top-article__text {
       width: 100%;
@@ -98,6 +102,9 @@
     .top-article__descritpion {
       display: flex;
       flex-direction: column;
+      @include respond(tablet) {
+        width: 32%;
+      }
     }
 
     .btn {
@@ -110,6 +117,8 @@
         margin-bottom: 0;
       }
     }
+
+    width: 100%;
   }
 }
 
@@ -122,6 +131,10 @@
 
   .article__tag {
     margin-right: 0.8rem;
+  }
+
+  .article-card & {
+    justify-content: left;
   }
 }
 
@@ -151,13 +164,15 @@
 }
 
 .trending {
-  // filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1))
-  // drop-shadow(0 1px 1px rgba(0, 0, 0, 0.06));
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1))
+    drop-shadow(0 1px 1px rgba(0, 0, 0, 0.06));
+  background-color: #fff;
 
   &--desktop {
     display: none;
     @include respond(tablet) {
       display: block;
+      width: 32%;
     }
   }
 
@@ -167,6 +182,7 @@
     border: 1px solid #e5e7eb;
     @include respond(tablet) {
       padding: 5.6rem 6.4rem 1.6rem 6.4rem;
+      height: 100%;
     }
   }
 
