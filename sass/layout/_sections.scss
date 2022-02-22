@@ -27,7 +27,6 @@
 }
 
 .header {
-  display: none;
   background-color: transparent;
   padding: 1.2rem 0 2rem;
   position: fixed;
@@ -47,18 +46,67 @@
   }
 
   &__logo {
-    width: 19.2rem;
+    width: 8rem;
+    display: flex;
+    align-items: center;
+
     img {
       width: 100%;
     }
+    @include respond(tablet) {
+      width: 19.2rem;
+    }
+  }
+
+  &__nav-phone {
+    border-radius: 50%;
+    border: 1px solid #fff;
+    margin-left: -4rem;
+    width: 3.6rem;
+    height: 3.6rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    @include respond(tablet) {
+      display: none;
+    }
+  }
+  &__nav-phone-link {
+    display: block;
+    line-height: 1;
+    text-align: center;
+    svg {
+      margin-top: 5px;
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+  }
+  &__nav-mobile {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    @include respond(tablet) {
+      display: none;
+    }
+  }
+  &__nav-mobile-ico {
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    color: #fff;
   }
 
   &__nav {
-    display: flex;
+    display: none;
     align-items: center;
     &-wrap {
       display: flex;
       align-items: center;
+    }
+    @include respond(tablet) {
+      display: flex;
     }
   }
 
@@ -85,10 +133,6 @@
 
   .btn--small {
     margin-left: 4.4rem;
-  }
-
-  @include respond(tablet) {
-    display: block;
   }
 }
 
@@ -262,7 +306,7 @@
   }
 
   .btn-wrap {
-    margin-top: 2.8rem;
+    margin-top: 0rem;
     .btn {
       @include respond(tablet) {
         margin-top: 4rem;
@@ -337,13 +381,13 @@
 }
 
 .footer {
-  margin: 5.6rem 0;
+  margin: 5.6rem 0 0;
   font-size: 1.4rem;
   padding: 1.6rem 0 0 0;
   font-family: Karla, sans-serif;
 
   line-height: 2rem;
-  color: rgb(57, 88, 111);
+  color: rgb(0, 102, 179);
 
   .footer-wrap {
     max-width: 128rem;
@@ -373,12 +417,30 @@
     color: rgb(151, 158, 166);
   }
   .footer-copyright-second {
-    display: block;
-    text-align: right;
+    display: flex;
+    align-content: flex-end;
+    justify-content: flex-end;
   }
   .footer-copyright-logo {
     display: inline-block;
     width: 7rem;
+    margin-left: 0.8rem;
+  }
+
+  .footer__last-col-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-soc-links__wrap {
+    margin-bottom: 1.6rem;
+  }
+
+  .footer-soc-links--link {
+    text-decoration: none;
+    svg {
+      width: 3.2rem;
+    }
   }
 
   .col-1-of-2 {
@@ -392,7 +454,6 @@
       margin-bottom: 2.4rem;
       order: 1;
       @include respond(tablet) {
-        padding-left: 5.6rem;
         margin-bottom: 0rem;
       }
     }
@@ -436,7 +497,7 @@
     }
 
     @include respond(tablet) {
-      width: calc((100% - 4 * 1.6rem) / 5);
+      // width: calc((100% - 4 * 1.6rem) / 5);
       margin-bottom: 2.4rem;
     }
   }
@@ -448,10 +509,64 @@
 
   @include respond(tablet) {
     padding: 9.6rem 0 8rem;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
 
     .row {
       flex-wrap: nowrap;
+    }
+  }
+}
+
+.language-chooser {
+  position: absolute;
+  width: 100%;
+  text-align: right;
+  top: 0;
+  padding-top: 0.8rem;
+
+  &__list {
+    padding: 0.8rem 0 0.4rem 0;
+    line-height: 2.4rem;
+    @include respond(tablet) {
+      line-height: 0;
+    }
+
+    .footer-lng-links__wrap & {
+      padding: 0;
+      line-height: 1.6rem;
+      line-height: 2.4rem;
+    }
+  }
+  &__link {
+    display: inline-flex;
+    font-family: "Karla", sans-serif;
+    font-size: 1.2rem;
+    color: rgb(0, 174, 239);
+    height: 2rem;
+    line-height: 1.2rem;
+    padding-right: 1.2rem;
+    padding-left: 0.8rem;
+    border-right-color: rgb(0, 174, 239);
+    border-right: 1px solid;
+    align-items: center;
+    text-decoration: none;
+    &:nth-child(1) {
+      padding-left: 0;
+    }
+    &:nth-child(3) {
+      border-right: none;
+    }
+
+    .footer-lng-links__wrap & {
+      color: rgb(82, 82, 82);
+      border: none;
+      padding: 0 0.4rem 0 0;
+    }
+
+    @include respond(tablet) {
+      font-size: 1.6rem;
+      height: 2rem;
+      line-height: 2.4rem;
     }
   }
 }

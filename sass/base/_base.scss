@@ -9,11 +9,15 @@
 img {
   display: block;
   vertical-align: middle;
+  max-width: 100%;
+  height: auto;
 }
 
 html {
   // This defines what 1rem is
   font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
