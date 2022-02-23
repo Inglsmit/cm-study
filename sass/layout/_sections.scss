@@ -247,7 +247,7 @@
           filter: grayscale(1) invert(1) brightness(2);
         }
         &:after {
-          background-color: rgb(205, 225, 240);
+          background-color: rgb(77, 148, 202);
         }
       }
     }
@@ -420,6 +420,9 @@
     display: flex;
     align-content: flex-end;
     justify-content: flex-end;
+    svg {
+      display: block;
+    }
   }
   .footer-copyright-logo {
     display: inline-block;
@@ -438,11 +441,13 @@
 
   .footer-soc-links {
     display: flex;
+    justify-content: flex-end;
   }
   .footer-soc-links--link {
     text-decoration: none;
     svg {
       width: 3.2rem;
+      display: block;
     }
   }
 
@@ -495,7 +500,7 @@
       text-align: right;
       width: 100%;
       @include respond(tablet) {
-        width: inherit;
+        width: 16%;
       }
     }
 

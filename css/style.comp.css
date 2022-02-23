@@ -306,7 +306,7 @@
     .hero-list__card:hover .heading-tertiary--arrow-link:before {
       filter: grayscale(1) invert(1) brightness(2); }
     .hero-list__card:hover .heading-tertiary--arrow-link:after {
-      background-color: #cde1f0; }
+      background-color: #4d94ca; }
     @media only screen and (min-width: 768px) {
       .hero-list__card {
         margin-bottom: 0; } }
@@ -450,6 +450,8 @@
     display: flex;
     align-content: flex-end;
     justify-content: flex-end; }
+    .footer .footer-copyright-second svg {
+      display: block; }
   .footer .footer-copyright-logo {
     display: inline-block;
     width: 7rem;
@@ -460,11 +462,13 @@
   .footer .footer-soc-links__wrap {
     margin-bottom: 1.6rem; }
   .footer .footer-soc-links {
-    display: flex; }
+    display: flex;
+    justify-content: flex-end; }
   .footer .footer-soc-links--link {
     text-decoration: none; }
     .footer .footer-soc-links--link svg {
-      width: 3.2rem; }
+      width: 3.2rem;
+      display: block; }
   .footer .col-1-of-2 {
     width: calc((100% - 1.6rem) / 2); }
   .footer .col-1-of-5 {
@@ -503,7 +507,7 @@
       width: 100%; }
       @media only screen and (min-width: 768px) {
         .footer .col-1-of-5:nth-child(5) {
-          width: inherit; } }
+          width: 16%; } }
     @media only screen and (min-width: 768px) {
       .footer .col-1-of-5 {
         width: 20%;
@@ -781,7 +785,7 @@
   text-align: center; }
 
 .u-margin-top-middle {
-  margin-top: 4rem; }
+  margin-top: 3.6rem; }
 
 .u-margin-bottom-big {
   margin-bottom: 7rem; }
