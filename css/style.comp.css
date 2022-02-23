@@ -737,12 +737,18 @@
   justify-content: flex-start; }
 
 .article-card {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   margin-bottom: 3.2rem; }
   .article-card__img-box {
     margin-bottom: 1.6rem; }
     .article-card__img-box img {
       width: 100%; }
+  .article-card__description {
+    display: flex;
+    flex-direction: column;
+    height: 100%; }
   .article-card__link {
     font-family: "DINCondensedWebNormal", sans-serif;
     color: inherit;
@@ -756,10 +762,12 @@
         font-size: 4rem;
         line-height: 4rem;
         margin-right: 3.6rem;
-        margin-bottom: 0.8rem; } }
+        margin-bottom: 0.8rem;
+        height: 8.8rem; } }
   .article-card__text {
     font-size: 1.6rem;
-    line-height: 2.4rem; }
+    line-height: 2.4rem;
+    flex-grow: 1; }
     @media only screen and (min-width: 768px) {
       .article-card__text {
         font-size: 2rem;
