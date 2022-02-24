@@ -37,6 +37,9 @@
     overflow: hidden;
     @include respond(tablet) {
       margin-top: 4rem;
+      .blog-page & {
+        margin-top: 0;
+      }
     }
   }
 

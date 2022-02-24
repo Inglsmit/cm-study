@@ -72,7 +72,9 @@
     overflow: hidden; }
     @media only screen and (min-width: 768px) {
       .hero__text-box {
-        margin-top: 4rem; } }
+        margin-top: 4rem; }
+        .blog-page .hero__text-box {
+          margin-top: 0; } }
   .hero .btn-wrap {
     margin-top: 3.2rem; }
     @media only screen and (min-width: 1024px) {
@@ -619,8 +621,9 @@
     line-height: 3rem; }
     @media only screen and (min-width: 768px) {
       .top-article__link {
-        line-height: 3.6rem;
-        width: 50%; } }
+        line-height: 4rem;
+        width: 50%;
+        font-size: 4rem; } }
   .top-article .paragraph.top-article__text {
     margin-bottom: 1.2rem; }
   .top-article__text {
@@ -633,7 +636,8 @@
     column-gap: 2.4rem;
     width: 100%; }
     .top-article__large-article--wide .top-article__link {
-      width: 100%; }
+      width: 100%;
+      margin-bottom: 0.8rem; }
     .top-article__large-article--wide .top-article__img-box {
       margin-bottom: 1.6rem;
       width: 100%; }
@@ -690,48 +694,52 @@
     .trending--mobile {
       display: none; } }
 
-.trending {
+.trending--desktop {
+  display: none; }
+  @media only screen and (min-width: 768px) {
+    .trending--desktop {
+      display: block;
+      width: 32%; } }
+
+.trending__holder {
   filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1)) drop-shadow(0 1px 1px rgba(0, 0, 0, 0.06));
-  background-color: #fff; }
-  .trending--desktop {
-    display: none; }
-    @media only screen and (min-width: 768px) {
-      .trending--desktop {
-        display: block;
-        width: 32%; } }
-  .trending__holder {
-    text-align: center;
-    padding: 2.8rem 2.8rem 1.6rem 2.8rem;
-    border: 1px solid #e5e7eb; }
-    @media only screen and (min-width: 768px) {
-      .trending__holder {
-        padding: 5.6rem 6.4rem 1.6rem 6.4rem;
-        height: 100%; } }
-  .trending__header.heading-tertiary {
-    font-size: 3rem;
-    line-height: 3rem;
-    margin-bottom: 2rem;
-    padding: 0 1.2rem; }
-    @media only screen and (min-width: 768px) {
-      .trending__header.heading-tertiary {
-        padding: 0 2.4rem;
-        line-height: 3.6rem;
-        margin-bottom: 4rem; } }
-  .trending__list-item {
-    margin-bottom: 4rem; }
-  .trending__title {
-    padding-bottom: 1.2rem;
-    border-bottom: 1px solid #e5e7eb; }
-  .trending__link {
-    font-family: "Karla", sans-serif;
-    text-decoration: none;
-    color: #525252;
-    font-size: 1.6rem;
-    line-height: 2.4rem; }
-    @media only screen and (min-width: 768px) {
-      .trending__link {
-        font-size: 2rem;
-        line-height: 2.8rem; } }
+  background-color: #fff;
+  text-align: center;
+  padding: 2.8rem 2.8rem 1.6rem 2.8rem;
+  border: 1px solid #e5e7eb; }
+  @media only screen and (min-width: 768px) {
+    .trending__holder {
+      padding: 5.6rem 6.4rem 1.6rem 6.4rem; } }
+
+.trending__header.heading-tertiary {
+  font-size: 3rem;
+  line-height: 3rem;
+  margin-bottom: 2rem;
+  padding: 0 1.2rem; }
+  @media only screen and (min-width: 768px) {
+    .trending__header.heading-tertiary {
+      padding: 0 2.4rem;
+      line-height: 3.6rem;
+      margin-bottom: 4rem;
+      font-size: 4rem; } }
+
+.trending__list-item {
+  margin-bottom: 4rem; }
+
+.trending__title {
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid #e5e7eb; }
+
+.trending__link {
+  font-family: "Karla", sans-serif;
+  text-decoration: none;
+  color: #525252;
+  font-size: 1.6rem;
+  line-height: 2.4rem; }
+  @media only screen and (min-width: 768px) {
+    .trending__link {
+      font-size: 2rem;
+      line-height: 2.8rem; } }
 
 .articles__list {
   display: flex;
@@ -766,16 +774,20 @@
         font-size: 4rem;
         line-height: 4rem;
         margin-right: 3.6rem;
-        margin-bottom: 0.8rem;
-        height: 8.8rem; } }
+        height: 8rem; } }
   .article-card__text {
     font-size: 1.6rem;
     line-height: 2.4rem;
     flex-grow: 1; }
     @media only screen and (min-width: 768px) {
-      .article-card__text {
+      .article-card__text.paragraph {
         font-size: 2rem;
-        line-height: 2.8rem; } }
+        line-height: 2.8rem;
+        margin-right: 3.6rem;
+        margin-bottom: 4rem !important; } }
+  @media only screen and (min-width: 768px) {
+    .article-card .tag-list {
+      margin-right: 3.6rem; } }
   @media only screen and (min-width: 768px) {
     .article-card {
       width: calc((100% - 4.8rem) / 3);
