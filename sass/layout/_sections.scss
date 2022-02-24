@@ -154,6 +154,8 @@
   }
 
   &__card {
+    position: relative;
+
     &:not(:last-child) {
       margin-bottom: 5.6rem;
       @include respond(tablet) {
@@ -183,6 +185,22 @@
           flex-direction: row-reverse;
         }
       }
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -8rem;
+      background-repeat: no-repeat;
+      background-position: right center;
+      width: 335px;
+      height: 380px;
+      background-size: contain;
+      background-image: url(https://columbiaokura.com/wp-content/themes/machina-theme/images/new-cubes-full-white.svg);
+      opacity: 0.8;
+      z-index: -1;
     }
   }
 
@@ -224,9 +242,12 @@
 .hero-list {
   margin: 5.6rem 0;
 
-  .hero-list-wrap {
+  .hero-list__wrap {
     max-width: 125.31rem;
     margin: 0 auto;
+    @include respond(tablet) {
+      max-width: 104rem;
+    }
   }
 
   .col-1-of-3 {
@@ -240,6 +261,7 @@
   &__card {
     display: inline-block;
     overflow: hidden;
+    text-decoration: none;
 
     &:hover {
       .heading-tertiary--arrow-link {
