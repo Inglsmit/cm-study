@@ -320,6 +320,9 @@
     @media only screen and (min-width: 768px) {
       .hero-list .hero-list__wrap {
         max-width: 104rem; } }
+    @media only screen and (min-width: 1536px) {
+      .hero-list .hero-list__wrap {
+        max-width: 125.31rem; } }
   .hero-list .col-1-of-3:not(:last-child) .hero-list__card {
     margin-bottom: 2rem; }
   .hero-list__card {

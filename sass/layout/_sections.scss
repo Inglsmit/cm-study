@@ -249,6 +249,9 @@
     @include respond(tablet) {
       max-width: 104rem;
     }
+    @include respond(big-desktop) {
+      max-width: 125.31rem;
+    }
   }
 
   .col-1-of-3 {
