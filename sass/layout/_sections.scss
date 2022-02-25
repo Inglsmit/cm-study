@@ -139,6 +139,7 @@
 .text-image {
   $p: &;
   margin: 5.6rem 0;
+  overflow: hidden;
 
   &__description {
     display: flex;
@@ -428,8 +429,16 @@
     @include respond(tablet) {
       margin-bottom: 0;
     }
+    .blog-page & {
+      margin-top: 1.6rem;
+    }
   }
   .footer-nav {
+    &--blue {
+      .footer-nav__link {
+        color: rgb(0, 102, 179);
+      }
+    }
     &__link {
       @include footer-link-clear;
     }
@@ -442,6 +451,7 @@
     display: flex;
     align-content: flex-end;
     justify-content: flex-end;
+    color: #525252;
     svg {
       display: block;
     }
@@ -465,7 +475,7 @@
     display: flex;
     justify-content: flex-end;
   }
-  .footer-soc-links--link {
+  .footer-soc-links__link {
     text-decoration: none;
     svg {
       width: 3.2rem;
@@ -500,11 +510,7 @@
     &:nth-child(3) {
       padding-left: 0;
       order: 2;
-      .footer-nav {
-        &__link {
-          color: rgb(0, 102, 179);
-        }
-      }
+
       @include respond(tablet) {
         padding-left: 5.6rem;
         order: 3;
@@ -541,6 +547,10 @@
     padding: 9.6rem 0 8rem;
     font-size: 1.4rem;
 
+    .blog-page & {
+      margin-top: 0;
+    }
+
     .row {
       flex-wrap: nowrap;
       column-gap: 1.6rem;
@@ -566,10 +576,10 @@
       padding: 0;
       line-height: 1.6rem;
       line-height: 2.4rem;
+      color: #525252;
     }
   }
   &__link {
-    display: inline-flex;
     font-family: "Karla", sans-serif;
     font-size: 1.2rem;
     color: rgb(0, 174, 239);
@@ -578,7 +588,7 @@
     padding-right: 1.2rem;
     padding-left: 0.8rem;
     border-right-color: rgb(0, 174, 239);
-    border-right: 1px solid;
+    border-right: 1.25px solid;
     align-items: center;
     text-decoration: none;
     &:nth-child(1) {
@@ -586,9 +596,22 @@
     }
     &:nth-child(3) {
       border-right: none;
+      .footer-lng-links__wrap & {
+        color: rgb(0, 102, 179);
+        text-stroke: 1px #0066b3;
+        text-stroke: 0.5px #0066b3;
+        -webkit-text-stroke: 1px #0066b3;
+        -webkit-text-stroke: 0.5px #0066b3;
+      }
+    }
+
+    &--current {
+      text-shadow: 0 0 0px #ffffff, 0 0 0.85px #ffffff;
+      color: #fff;
     }
 
     .footer-lng-links__wrap & {
+      display: inline-flex;
       color: rgb(82, 82, 82);
       border: none;
       padding: 0 0.4rem 0 0;

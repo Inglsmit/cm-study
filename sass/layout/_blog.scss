@@ -49,6 +49,9 @@
   &__large-article {
     width: 100%;
     @include respond(tablet) {
+      width: calc(68% - 1.7rem);
+    }
+    @include respond(big-desktop) {
       width: calc(68% - 2.8rem);
     }
   }
@@ -92,7 +95,11 @@
     .top-article__img-box {
       margin-bottom: 1.6rem;
       width: 100%;
+
       @include respond(tablet) {
+        width: calc(68% - 1.7rem);
+      }
+      @include respond(big-desktop) {
         width: calc(68% - 2.8rem);
       }
     }
@@ -137,6 +144,11 @@
 
   .article-card & {
     justify-content: left;
+    margin-bottom: 0;
+    row-gap: 0;
+    .article__tag {
+      margin-bottom: 0.8rem;
+    }
   }
 }
 
