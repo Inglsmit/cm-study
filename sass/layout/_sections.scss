@@ -333,6 +333,9 @@
 
   .btn-wrap {
     margin-top: 2.8rem;
+    @include respond(tablet) {
+      margin-top: 0;
+    }
     .btn {
       @include respond(tablet) {
         margin-top: 4rem;
@@ -673,6 +676,9 @@
       display: flex;
       align-items: center;
       font-size: 1.6rem;
+      @include respond(tablet) {
+        justify-content: flex-end;
+      }
     }
   }
   &__link {

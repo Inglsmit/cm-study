@@ -379,6 +379,9 @@
   .section-cta .btn-wrap {
     margin-top: 2.8rem; }
     @media only screen and (min-width: 768px) {
+      .section-cta .btn-wrap {
+        margin-top: 0; } }
+    @media only screen and (min-width: 768px) {
       .section-cta .btn-wrap .btn {
         margin-top: 4rem;
         padding: 1.2rem 11.725rem 1.2rem 11.725rem; } }
@@ -649,6 +652,9 @@
       display: flex;
       align-items: center;
       font-size: 1.6rem; }
+      @media only screen and (min-width: 768px) {
+        .footer-lng-links__wrap .language-chooser__list {
+          justify-content: flex-end; } }
   .language-chooser__link {
     font-family: "Karla", sans-serif;
     font-size: 1.2rem;
