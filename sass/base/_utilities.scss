@@ -3,7 +3,10 @@
 }
 
 .u-margin-top-middle {
-  margin-top: 3.6rem;
+  margin-top: 2.4rem;
+  @include respond(tablet) {
+    margin-top: 3.6rem;
+  }
 }
 
 .u-margin-bottom-big {

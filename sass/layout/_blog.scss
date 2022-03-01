@@ -235,6 +235,8 @@
 }
 
 .articles {
+  padding-bottom: 0.4rem;
+
   &__wrap {
   }
   &__list {
@@ -276,13 +278,12 @@
     text-decoration: none;
     font-size: 3rem;
     line-height: 3rem;
-    margin-right: 0;
+    margin-right: 3.6rem;
     margin-bottom: 0rem;
 
     @include respond(tablet) {
       font-size: 4rem;
       line-height: 4rem;
-      margin-right: 3.6rem;
       min-height: 8rem;
     }
   }
@@ -291,12 +292,13 @@
     font-size: 1.6rem;
     line-height: 2.4rem;
     flex-grow: 1;
+    margin-right: 3.6rem;
+    margin-bottom: 4rem !important;
 
     &.paragraph {
       @include respond(tablet) {
         font-size: 2rem;
         line-height: 2.8rem;
-        margin-right: 3.6rem;
         margin-bottom: 4rem !important;
       }
     }

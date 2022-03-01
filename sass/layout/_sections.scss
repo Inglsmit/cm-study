@@ -132,7 +132,7 @@
   }
 
   .btn--small {
-    margin-left: 4.4rem;
+    margin-left: 4.3rem;
   }
 }
 
@@ -332,7 +332,7 @@
   }
 
   .btn-wrap {
-    margin-top: 0rem;
+    margin-top: 2.8rem;
     .btn {
       @include respond(tablet) {
         margin-top: 4rem;
@@ -368,8 +368,8 @@
     position: absolute;
     background-repeat: no-repeat;
     background-position: right center;
-    width: 18.7rem;
-    height: 16.4rem;
+    height: 18.7rem;
+    width: 16.4rem;
 
     opacity: 0.3;
     z-index: 0;
@@ -407,13 +407,27 @@
 }
 
 .footer {
-  margin: 5.6rem 0 0;
+  margin: 5.6rem 0 8rem;
   font-size: 1.4rem;
   padding: 1.6rem 0 0 0;
   font-family: Karla, sans-serif;
 
   line-height: 2rem;
   color: rgb(0, 102, 179);
+
+  .blog-page & {
+    margin-top: 4.8rem;
+  }
+
+  .section-wrap {
+    .row {
+      justify-content: space-between;
+
+      @include respond(tablet) {
+        justify-content: space-between;
+      }
+    }
+  }
 
   .footer-wrap {
     max-width: 128rem;
@@ -426,14 +440,11 @@
   }
   .footer-link-tel {
     display: inline-block;
-    margin-top: 1.8rem;
+    margin-top: 1.6rem;
     margin-bottom: 1.6rem;
     @include footer-link-clear;
     @include respond(tablet) {
       margin-bottom: 0;
-    }
-    .blog-page & {
-      margin-top: 1.6rem;
     }
   }
   .footer-nav {
@@ -447,42 +458,101 @@
     }
   }
 
+  .footer-copyright__wrap {
+    .col-1-of-2:nth-child(1) {
+      order: 2;
+      @include respond(tablet) {
+        order: 1;
+      }
+    }
+    .col-1-of-2:nth-child(2) {
+      order: 1;
+      @include respond(tablet) {
+        order: 2;
+      }
+    }
+  }
   .footer-copyright {
     color: rgb(151, 158, 166);
+    font-size: 1.2rem;
+    @include respond(tablet) {
+      font-size: 1.4rem;
+    }
   }
   .footer-copyright-second {
     display: flex;
-    align-content: flex-end;
-    justify-content: flex-end;
+    align-content: flex-start;
+    justify-content: flex-start;
     color: #525252;
     svg {
       display: block;
+    }
+    font-size: 1.2rem;
+    margin-top: 0.2rem;
+    @include respond(tablet) {
+      font-size: 1.4rem;
+      align-content: flex-end;
+      justify-content: flex-end;
+      margin-top: 0;
     }
   }
   .footer-copyright-logo {
     display: inline-block;
     width: 7rem;
     margin-left: 0.8rem;
+    margin-top: -0.2rem;
   }
 
   .footer__last-col-wrap {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    @include respond(tablet) {
+      flex-direction: column;
+    }
   }
 
   .footer-soc-links__wrap {
-    margin-bottom: 1.6rem;
+    margin-bottom: 0;
+    width: 50%;
+    @include respond(tablet) {
+      margin-bottom: 1.6rem;
+      width: 100%;
+    }
+  }
+  .footer-lng-links__wrap {
+    width: 50%;
+    margin-top: 1.6rem;
+    display: flex;
+    justify-content: flex-end;
+
+    .language-chooser__link {
+      font-size: 1.6rem;
+    }
+    @include respond(tablet) {
+      width: 100%;
+      margin-top: 0;
+      display: block;
+    }
   }
 
   .footer-soc-links {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    margin-top: 1.6rem;
+
+    @include respond(tablet) {
+      margin-top: 0;
+      justify-content: flex-end;
+    }
   }
   .footer-soc-links__link {
     text-decoration: none;
     svg {
-      width: 3.2rem;
+      width: 2.4rem;
       display: block;
+      @include respond(tablet) {
+        width: 3.2rem;
+      }
     }
   }
 
@@ -525,6 +595,14 @@
       @include respond(tablet) {
         padding-left: 5.6rem;
       }
+      .blog-page & {
+        margin-top: -1rem;
+        margin-bottom: 1rem;
+        @include respond(tablet) {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      }
     }
     &:nth-child(5) {
       order: 5;
@@ -547,7 +625,7 @@
   }
 
   @include respond(tablet) {
-    padding: 9.6rem 0 8rem;
+    padding: 9.6rem 0 0;
     font-size: 1.4rem;
 
     .blog-page & {
@@ -580,6 +658,9 @@
       line-height: 1.6rem;
       line-height: 2.4rem;
       color: #525252;
+      display: flex;
+      align-items: center;
+      font-size: 1.6rem;
     }
   }
   &__link {
@@ -591,14 +672,18 @@
     padding-right: 1.2rem;
     padding-left: 0.8rem;
     border-right-color: rgb(0, 174, 239);
-    border-right: 1.25px solid;
+    border-right: 1px solid;
     align-items: center;
     text-decoration: none;
     &:nth-child(1) {
       padding-left: 0;
     }
+    &:nth-child(2) {
+      padding-left: 1rem;
+    }
     &:nth-child(3) {
       border-right: none;
+      padding-left: 0.9rem;
       .footer-lng-links__wrap & {
         color: rgb(0, 102, 179);
         text-stroke: 1px #0066b3;
@@ -617,7 +702,10 @@
       display: inline-flex;
       color: rgb(82, 82, 82);
       border: none;
-      padding: 0 0.4rem 0 0;
+      padding: 0 0.4rem 0 0.4rem;
+      &:nth-child(1) {
+        padding-left: 0;
+      }
     }
 
     @include respond(tablet) {
