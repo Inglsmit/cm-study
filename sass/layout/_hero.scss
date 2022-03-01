@@ -45,6 +45,12 @@
 
   .btn-wrap {
     margin-top: 3.2rem;
+    .blog-page & {
+      margin-top: 4rem;
+      @include respond(tablet) {
+        margin-top: 3.2rem;
+      }
+    }
 
     @include respond(tablet-land) {
       margin-top: 8rem;

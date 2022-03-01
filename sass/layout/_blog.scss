@@ -102,6 +102,18 @@
       @include respond(big-desktop) {
         width: calc(68% - 2.8rem);
       }
+
+      img {
+        -o-object-fit: cover;
+        object-fit: cover;
+        height: calc(100vw - 32px);
+
+        @include respond(tablet) {
+          -o-object-fit: unset;
+          object-fit: unset;
+          height: auto;
+        }
+      }
     }
     .top-article__text {
       width: 100%;
@@ -116,6 +128,9 @@
       }
     }
 
+    .btn-wrap {
+      margin-top: 2rem;
+    }
     .btn {
       width: auto;
     }
@@ -259,6 +274,15 @@
 
     img {
       width: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+      height: calc(100vw - 32px);
+
+      @include respond(tablet) {
+        -o-object-fit: unset;
+        object-fit: unset;
+        height: auto;
+      }
     }
   }
 

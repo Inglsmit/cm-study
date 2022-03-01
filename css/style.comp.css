@@ -77,6 +77,11 @@
           margin-top: 0; } }
   .hero .btn-wrap {
     margin-top: 3.2rem; }
+    .blog-page .hero .btn-wrap {
+      margin-top: 4rem; }
+      @media only screen and (min-width: 768px) {
+        .blog-page .hero .btn-wrap {
+          margin-top: 3.2rem; } }
     @media only screen and (min-width: 1024px) {
       .hero .btn-wrap {
         margin-top: 8rem; } }
@@ -760,6 +765,15 @@
       @media only screen and (min-width: 1536px) {
         .top-article__large-article--wide .top-article__img-box {
           width: calc(68% - 2.8rem); } }
+      .top-article__large-article--wide .top-article__img-box img {
+        -o-object-fit: cover;
+        object-fit: cover;
+        height: calc(100vw - 32px); }
+        @media only screen and (min-width: 768px) {
+          .top-article__large-article--wide .top-article__img-box img {
+            -o-object-fit: unset;
+            object-fit: unset;
+            height: auto; } }
     .top-article__large-article--wide .top-article__text {
       width: 100%;
       flex-grow: 1; }
@@ -769,6 +783,8 @@
       @media only screen and (min-width: 768px) {
         .top-article__large-article--wide .top-article__descritpion {
           width: calc(32% + 0.4rem); } }
+    .top-article__large-article--wide .btn-wrap {
+      margin-top: 2rem; }
     .top-article__large-article--wide .btn {
       width: auto; }
     @media only screen and (min-width: 768px) {
@@ -877,7 +893,15 @@
   .article-card__img-box {
     margin-bottom: 1.6rem; }
     .article-card__img-box img {
-      width: 100%; }
+      width: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+      height: calc(100vw - 32px); }
+      @media only screen and (min-width: 768px) {
+        .article-card__img-box img {
+          -o-object-fit: unset;
+          object-fit: unset;
+          height: auto; } }
   .article-card__description {
     display: flex;
     flex-direction: column;
@@ -1012,6 +1036,13 @@ body {
     line-height: 2.8rem;
     margin-top: 0.8rem;
     width: 100%; }
+    .blog-page .heading-primary--sub {
+      font-size: 2.4rem;
+      line-height: 3.2rem;
+      margin-top: 1.2rem; }
+      @media only screen and (min-width: 768px) {
+        .blog-page .heading-primary--sub {
+          margin-top: 0.8rem; } }
     @media only screen and (min-width: 768px) {
       .heading-primary--sub {
         font-size: 2.4rem;
