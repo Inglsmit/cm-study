@@ -81,8 +81,8 @@
       margin-top: 4rem; }
       @media only screen and (min-width: 768px) {
         .blog-page .hero .btn-wrap {
-          margin-top: 3.2rem; } }
-    @media only screen and (min-width: 1024px) {
+          margin-top: 8rem; } }
+    @media only screen and (min-width: 768px) {
       .hero .btn-wrap {
         margin-top: 8rem; } }
   .hero .float-ads {
@@ -486,14 +486,20 @@
       -webkit-text-stroke: 0.5px #0066b3; }
   .footer .footer-copyright__wrap .col-1-of-2:nth-child(1) {
     order: 2; }
+    .footer .footer-copyright__wrap .col-1-of-2:nth-child(1) .footer-copyright {
+      display: block;
+      line-height: 1.6rem; }
     @media only screen and (min-width: 768px) {
       .footer .footer-copyright__wrap .col-1-of-2:nth-child(1) {
         order: 1; } }
   .footer .footer-copyright__wrap .col-1-of-2:nth-child(2) {
-    order: 1; }
+    order: 1;
+    display: flex;
+    align-items: center; }
     @media only screen and (min-width: 768px) {
       .footer .footer-copyright__wrap .col-1-of-2:nth-child(2) {
-        order: 2; } }
+        order: 2;
+        display: block; } }
   .footer .footer-copyright {
     color: #979ea6;
     font-size: 1.2rem; }
@@ -574,6 +580,8 @@
     .footer .col-1-of-5:nth-child(2) {
       padding-left: 0;
       order: 3; }
+      .footer .col-1-of-5:nth-child(2) p {
+        margin-bottom: 1.6rem; }
       @media only screen and (min-width: 768px) {
         .footer .col-1-of-5:nth-child(2) {
           order: 2;
@@ -591,13 +599,10 @@
       @media only screen and (min-width: 768px) {
         .footer .col-1-of-5:nth-child(4) {
           padding-left: 5.6rem; } }
-      .blog-page .footer .col-1-of-5:nth-child(4) {
-        margin-top: -1rem;
-        margin-bottom: 1rem; }
-        @media only screen and (min-width: 768px) {
-          .blog-page .footer .col-1-of-5:nth-child(4) {
-            margin-top: 0;
-            margin-bottom: 0; } }
+      @media only screen and (min-width: 768px) {
+        .blog-page .footer .col-1-of-5:nth-child(4) {
+          margin-top: 0;
+          margin-bottom: 0; } }
     .footer .col-1-of-5:nth-child(5) {
       order: 5;
       text-align: right;

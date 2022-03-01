@@ -48,11 +48,11 @@
     .blog-page & {
       margin-top: 4rem;
       @include respond(tablet) {
-        margin-top: 3.2rem;
+        margin-top: 8rem;
       }
     }
 
-    @include respond(tablet-land) {
+    @include respond(tablet) {
       margin-top: 8rem;
     }
   }

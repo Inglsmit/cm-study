@@ -461,14 +461,21 @@
   .footer-copyright__wrap {
     .col-1-of-2:nth-child(1) {
       order: 2;
+      .footer-copyright {
+        display: block;
+        line-height: 1.6rem;
+      }
       @include respond(tablet) {
         order: 1;
       }
     }
     .col-1-of-2:nth-child(2) {
       order: 1;
+      display: flex;
+      align-items: center;
       @include respond(tablet) {
         order: 2;
+        display: block;
       }
     }
   }
@@ -574,6 +581,11 @@
     &:nth-child(2) {
       padding-left: 0;
       order: 3;
+
+      p {
+        margin-bottom: 1.6rem;
+      }
+
       @include respond(tablet) {
         order: 2;
         padding-left: 5.6rem;
@@ -596,8 +608,6 @@
         padding-left: 5.6rem;
       }
       .blog-page & {
-        margin-top: -1rem;
-        margin-bottom: 1rem;
         @include respond(tablet) {
           margin-top: 0;
           margin-bottom: 0;
